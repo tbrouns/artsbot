@@ -58,9 +58,13 @@ If you run this for the first time, it needs to scrape the summaries as well.
     docker run -it --gpus all -v $(pwd)/local_test/test_dir:/opt/ml -p 8080:8080 --rm prediction_docker_image 
     python3 serve
 
+It can take some time before the server is up and running.
+
 ## Testing
 
-Test inference (local):
+After setting up the server, you can test (local) inference in a different terminal with:
 
     cd local_test
     bash predict.sh input.json
+
+The JSON output will be printed to the terminal. You can change the queries in `input.json`.
