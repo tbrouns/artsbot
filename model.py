@@ -58,7 +58,7 @@ class Model:
         summaries_path_list = glob.glob(os.path.join(summary_path, "*.txt"))
         entry_dict = load_yaml("thuisarts.yaml")
         # Run through each summary and get the embedding from the model
-        print("Extract the embeddings ... \n")
+        print("Extracting the embeddings ... \n")
         for summary_id in tqdm(range(len(summaries_path_list))):
             summary_path = summaries_path_list[summary_id]
             id = int(get_basename_no_ext(summary_path))
