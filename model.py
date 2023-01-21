@@ -77,6 +77,7 @@ class Model:
         print("No summaries found. Scraping the website ...")
         # Need to import like this because module name includes a dash
         import importlib
+
         Scraper = importlib.import_module("thuisarts-db.get_thuisarts_topics.Scraper")
         # Run the scraper
         scraper = Scraper()
