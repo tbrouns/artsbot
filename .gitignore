@@ -1,3 +1,12 @@
+# Custom
+thuisarts-summaries/*
+thuisarts*.yaml
+model.pth
+.idea/
+*.pkl
+*.tar.gz
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
