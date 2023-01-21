@@ -35,23 +35,25 @@ Output entries:
 
 ## Set-up
 
-Pull the git submodules:
+### Pull the git submodules:
 
     git submodule update --init --recursive
 
-Install depedencies:
+### Install depedencies:
 
     pip install -r requirements.txt
 
-Build the Docker image:
+### Build the Docker image:
 
     docker build -t prediction_docker_image .
 
-Create the model:
+### Create the model:
+
+If you run this for the first time, it needs to scrape the summaries as well.
 
     python3 save_model.py
 
-Run the server:
+### Run the server:
 
     docker run -it --gpus all -v $(pwd)/local_test/test_dir:/opt/ml -p 8080:8080 --rm prediction_docker_image 
     python3 serve
