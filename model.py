@@ -78,7 +78,7 @@ class Model:
         # Need to import like this because module name includes a dash
         import importlib
 
-        Scraper = importlib.import_module(".thuisarts-db.get_thuisarts_topics.Scraper")
+        Scraper = importlib.import_module(".thuisarts-db.get_thuisarts_topics.Scraper", package=__package__)
         # Run the scraper
         scraper = Scraper()
         scraper.dump_summaries()
