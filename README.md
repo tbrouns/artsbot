@@ -39,6 +39,10 @@ Pull the git submodules:
 
     git submodule update --init --recursive
 
+Install depedencies:
+
+    pip install -r requirements.txt
+
 Build the Docker image:
 
     docker build -t prediction_docker_image .
