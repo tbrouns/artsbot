@@ -35,7 +35,9 @@ class Model:
         return return_summaries
 
     def save(self):
-        save_pickle(cfg.model_savepath, self)
+        model_savepath = os.path.join(cfg.cwd, cfg.model_savepath)
+        os.makedirs(os.path.dirname(model_savepath), exist_ok=True)
+        save_pickle(model_savepath, self)
 
     @staticmethod
     def transform(input_df):
@@ -56,6 +58,7 @@ class Model:
         summaries_path_list = glob.glob(os.path.join(summary_path, "*.txt"))
         entry_dict = load_yaml("thuisarts.yaml")
         # Run through each summary and get the embedding from the model
+        print("Extract the embeddings ... \n")
         for summary_id in tqdm(range(len(summaries_path_list))):
             summary_path = summaries_path_list[summary_id]
             id = int(get_basename_no_ext(summary_path))
@@ -74,7 +77,8 @@ class Model:
 
     @staticmethod
     def scrape():
-        print("No summaries found. Scraping the website ...")
+        print("No summaries found! Need to perform first time set-up.\n")
+        print("Scraping the `thuisarts.nl` website ... \n")
         from thuisarts_db.get_thuisarts_topics import Scraper
 
         # Run the scraper
