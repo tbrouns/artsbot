@@ -75,7 +75,7 @@ class Model:
     @staticmethod
     def scrape():
         print("No summaries found. Scraping the website ...")
-        import thuisarts_db.get_thuisarts_topics as Scraper
+        from thuisarts_db.get_thuisarts_topics import Scraper
 
         # Run the scraper
         scraper = Scraper()
