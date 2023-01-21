@@ -75,10 +75,7 @@ class Model:
     @staticmethod
     def scrape():
         print("No summaries found. Scraping the website ...")
-        # Need to import like this because module name includes a dash
-        import importlib
-
-        Scraper = importlib.import_module(".thuisarts-db.get_thuisarts_topics.Scraper", package=__package__)
+        import thuisarts_db.get_thuisarts_topics as Scraper
         # Run the scraper
         scraper = Scraper()
         scraper.dump_summaries()
