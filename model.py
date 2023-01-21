@@ -76,6 +76,7 @@ class Model:
     def scrape():
         print("No summaries found. Scraping the website ...")
         import thuisarts_db.get_thuisarts_topics as Scraper
+
         # Run the scraper
         scraper = Scraper()
         scraper.dump_summaries()
