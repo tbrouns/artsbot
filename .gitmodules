@@ -2,5 +2,5 @@
 	path = utils
 	url = git@github.com:tbrouns/utils.git
 [submodule "thuisarts-db"]
-	path = thuisarts-db
+	path = thuisarts_db
 	url = git@github.com:tbrouns/thuisarts-db.git
