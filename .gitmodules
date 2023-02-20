@@ -1,6 +1,6 @@
 [submodule "utils"]
 	path = utils
-	url = git@github.com:tbrouns/utils.git
+	url = git@github.com:tbrouns/py_utils.git
 [submodule "thuisarts-db"]
 	path = thuisarts_db
 	url = git@github.com:tbrouns/thuisarts-db.git
